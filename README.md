@@ -15,7 +15,7 @@ Antes de começar, certifique-se de ter instalado:
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-app.git
+git clone [https://github.com/seu-usuario/seu-app.git](https://github.com/LeticiaParreiras/MedBox-Trabalho-Mobile)
 cd seu-app
 ```
 

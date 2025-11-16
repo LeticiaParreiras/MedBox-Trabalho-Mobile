@@ -38,7 +38,9 @@ ou, se preferir usar yarn:
 yarn install
 ```
 
-**Nota:** O AsyncStorage já será instalado automaticamente como dependência do projeto.
+## Instalando o AsyncStorage
+
+- No terminal, use: npx expo install @react-native-async-storage/async-storage
 
 ### 3. Inicie o projeto
 

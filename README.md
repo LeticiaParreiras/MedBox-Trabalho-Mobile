@@ -1,6 +1,6 @@
 # Nome do App
 
-Descrição breve do seu aplicativo.
+MedBox
 
 ## 📋 Pré-requisitos
 

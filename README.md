@@ -179,6 +179,6 @@ Este projeto está sob a licença MIT.
 
 ## 👤 Autores
 
-Igor Sudo
-Letícia Parreiras
-Mariana Urani
+- Igor Sudo
+- Letícia Parreiras
+- Mariana Urani

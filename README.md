@@ -1,6 +1,13 @@
 # Nome do App
 
-MedBox
+MedBox - Aplicativo criado para a matéria de Desenvolvimento Mobile I
+
+## 🏗️ Tecnologias Utilizadas
+
+- **React Native** - Framework para desenvolvimento mobile
+- **Expo** - Plataforma de desenvolvimento
+- **AsyncStorage** - Armazenamento local de dados
+- **Context API** - Gerenciamento de estado global
 
 ## 📋 Pré-requisitos
 
@@ -30,6 +37,8 @@ ou, se preferir usar yarn:
 ```bash
 yarn install
 ```
+
+**Nota:** O AsyncStorage já será instalado automaticamente como dependência do projeto.
 
 ### 3. Inicie o projeto
 
@@ -118,6 +127,15 @@ npx expo build:ios
 
 ## 🐛 Solução de Problemas
 
+### Problemas com AsyncStorage
+
+Se os dados não estiverem sendo salvos ou recuperados:
+
+```bash
+# Limpe o cache do AsyncStorage no dispositivo
+# Desinstale e reinstale o app no Expo Go
+```
+
 ### Cache do Expo
 
 Se encontrar problemas, tente limpar o cache:
@@ -133,12 +151,34 @@ rm -rf node_modules
 npm install
 ```
 
+### Dados não persistem
+
+O AsyncStorage armazena dados localmente no dispositivo. Se você trocar de dispositivo ou reinstalar o Expo Go, os dados serão perdidos. Para desenvolvimento, isso é normal.
+
+## ⚙️ Funcionalidades
+
+### Armazenamento Local (AsyncStorage)
+
+O app utiliza AsyncStorage para persistir dados localmente no dispositivo, permitindo que as informações sejam mantidas mesmo após fechar o aplicativo.
+
+### Gerenciamento de Estado (Context API)
+
+A Context API é utilizada para gerenciar o estado global da aplicação, facilitando o compartilhamento de dados entre componentes sem prop drilling.
+
 ## 📚 Documentação
 
 - [Documentação do Expo](https://docs.expo.dev/)
 - [Expo Go](https://expo.dev/client)
 - [React Native](https://reactnative.dev/)
+- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+- [Context API](https://react.dev/reference/react/useContext)
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT.
+
+## 👤 Autores
+
+Igor Sudo
+Letícia Parreiras
+Mariana Urani

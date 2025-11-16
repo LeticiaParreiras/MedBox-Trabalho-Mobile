@@ -83,7 +83,7 @@ const carregar = async () => {
                 <Text style={styles.productDetail}>
                   Quantidade: {produto.quantidade}
                 </Text>
-                <Text style={styles.productPrice}>R$ {produto.preco.toFixed(2)}</Text>
+                <Text style={styles.productPrice}>R$ {produto.preco}</Text>
                 <View style={styles.receitaBadge}>
                   <View
                     style={[

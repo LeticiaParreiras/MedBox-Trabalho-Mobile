@@ -18,3 +18,4 @@
 ## Rotas
 * Trocar Filial
 * Rotas CRUD dos produtos
+* Histórico de Pedidos

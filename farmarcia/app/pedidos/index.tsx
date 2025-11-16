@@ -16,10 +16,12 @@ import {
   Status,
 } from "@/scripts/PedidosService";
 import { formatDate } from "@/scripts/data";
+import { useRouter } from "expo-router";
 
 export default function DesempenhoPedidos() {
   const [filtroAtivo, setFiltroAtivo] = useState("hoje");
   const [Pedidos, setPedidos] = useState<pedidos[]>([]);
+  const router = useRouter();
   const [estatisticas, setEstatisticas] = useState<estatisticas>({
     totalVendas: 0,
     totalPedidos: 0,
@@ -61,9 +63,6 @@ export default function DesempenhoPedidos() {
       <View style={styles.header}>
         <View style={styles.headerTop}>
           <Text style={styles.headerTitle}>Desempenho de pedidos</Text>
-          <TouchableOpacity style={styles.headerButton}>
-            <ChevronRight size={24} color="#1F2937" strokeWidth={2} />
-          </TouchableOpacity>
         </View>
 
         {/* Filtros */}
@@ -208,7 +207,8 @@ export default function DesempenhoPedidos() {
                       </Text>
                     </View>
 
-                    <TouchableOpacity style={styles.botaoDetalhes}>
+                    <TouchableOpacity style={styles.botaoDetalhes}
+                    onPress={() => router.push(`/pedidos/${pedido.id}`)}>
                       <Text style={styles.botaoDetalhesTexto}>Ver mais</Text>
                       <ChevronRight size={16} color="#fff" strokeWidth={2.5} />
                     </TouchableOpacity>

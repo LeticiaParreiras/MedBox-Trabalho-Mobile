@@ -26,6 +26,8 @@ export default function RootLayout() {
         <Stack.Screen name="filiais" options={{ title: "Filiais" }} />
         <Stack.Screen name="produtos/index" options={{title: "Produtos"}}/>
         <Stack.Screen name="produtos/add" options={{title: "Novo Produto"}}/>
+        <Stack.Screen name="pedidos/index" options={{title: "Pedidos"}}/>
+        <Stack.Screen name="pedidos/[id]" options={{title: "Detalhe Pedido"}}/>
       </Stack>
       <StatusBar style="auto" />
     </>

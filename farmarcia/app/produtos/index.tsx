@@ -9,7 +9,7 @@ import {
   Alert,
 } from "react-native";
 import { Plus, Edit2, Trash2 } from "lucide-react-native";
-import { listarProdutos, produto, deletarProduto } from "@/scripts/produtosService";
+import { carregarProdutos, produto, deletarProduto } from "@/scripts/produtosService";
 import { useRouter } from "expo-router";
 
 export default function ProdutosScreen() {
@@ -36,7 +36,7 @@ export default function ProdutosScreen() {
   );
 };
 const carregar = async () => {
-  const dados = await listarProdutos();
+  const dados = await carregarProdutos();
   setProdutos(dados);
 };
 
@@ -67,10 +67,14 @@ const carregar = async () => {
               {/* Imagem do produto */}
               <View style={styles.productImageContainer}>
                 <Image
-                  source={{ uri: produto.imagem }} // Modificar esta linha
-                  style={styles.productImage}
-                  resizeMode="contain"
-                />
+                 source={
+                produto.imagem && produto.imagem !== ""
+                  ? { uri: produto.imagem }
+                  : require("@/assets/images/remedio.png")
+              }
+              style={styles.productImage}
+              resizeMode="contain"
+                            />
               </View>
 
               {/* Info do produto */}
@@ -79,7 +83,7 @@ const carregar = async () => {
                 <Text style={styles.productDetail}>
                   Quantidade: {produto.quantidade}
                 </Text>
-                <Text style={styles.productPrice}>R$ {produto.preco}</Text>
+                <Text style={styles.productPrice}>R$ {produto.preco.toFixed(2)}</Text>
                 <View style={styles.receitaBadge}>
                   <View
                     style={[

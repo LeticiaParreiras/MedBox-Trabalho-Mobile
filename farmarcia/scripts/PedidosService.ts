@@ -2,7 +2,7 @@
 // Arquivo: services/pedidosService.js
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { dataAleatoriaAte30Dias } from "./data";
+import { gerarDatas } from "./data";
 
 const STORAGE_KEY = "@farmacia_pedidos";
 
@@ -40,8 +40,7 @@ const pedidosIniciais: pedidos[] = [
     produtos: [{ id: 0, quantidade: 2 }],
     total: 25.0,
     status: Status.Entrega,
-    createdAt: dataAleatoriaAte30Dias(),
-    updatedAt: dataAleatoriaAte30Dias(),
+    ...gerarDatas(),
   },
   {
     id: 17,
@@ -49,8 +48,7 @@ const pedidosIniciais: pedidos[] = [
     produtos: [{ id: 1, quantidade: 1 }],
     total: 25.9,
     status: Status.Entregue,
-    createdAt: dataAleatoriaAte30Dias(),
-    updatedAt: dataAleatoriaAte30Dias(),
+    ...gerarDatas(),
   },
   {
     id: 42,
@@ -58,8 +56,7 @@ const pedidosIniciais: pedidos[] = [
     produtos: [{ id: 2, quantidade: 3 }],
     total: 26.7,
     status: Status.Cancelado,
-    createdAt: dataAleatoriaAte30Dias(),
-    updatedAt: dataAleatoriaAte30Dias(),
+    ...gerarDatas(),
   },
   {
     id: 24,
@@ -67,8 +64,7 @@ const pedidosIniciais: pedidos[] = [
     produtos: [{ id: 2, quantidade: 2 }],
     total: 30.0,
     status: Status.Confirmado,
-    createdAt: dataAleatoriaAte30Dias(),
-    updatedAt: dataAleatoriaAte30Dias(),
+    ...gerarDatas(),
   },
 ];
 
